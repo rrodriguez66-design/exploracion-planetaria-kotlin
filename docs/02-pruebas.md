@@ -63,3 +63,5 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Utilizar `copy()`.
 *   **Resultado esperado:** Se obtiene un nuevo objeto con la modificación solicitada.
 *   **Resultado obtenido:** ¡Exitoso! Se duplicó el hallazgo 1 para crear el hallazgo 2, cambiando solo la descripción y la zona, dejando el tipo intacto.
+
+<img width="1666" height="770" alt="image" src="https://github.com/user-attachments/assets/daae6dce-9f4c-4205-90e8-35089163a98e" />
