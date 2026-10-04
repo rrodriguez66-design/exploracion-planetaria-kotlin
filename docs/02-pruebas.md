@@ -92,3 +92,5 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Compilación y ejecución tras reorganizar las clases en paquetes.
 *   **Resultado esperado:** El proyecto compila sin errores de importación y el archivo `Main.kt` coordina correctamente los paquetes mediante sentencias `import`.
 *   **Resultado obtenido:** ¡Exitoso! El sistema mantiene exactamente el mismo comportamiento funcional pero con una arquitectura modular y limpia.
+
+<img width="1715" height="948" alt="image" src="https://github.com/user-attachments/assets/c89c00e2-efc8-4633-ab33-fbd8040be22d" />
