@@ -5,6 +5,6 @@ class Explorador(
 ) {
     // El bloque init se ejecuta inmediatamente al nacer el objeto
     init {
-        println("Iniciando sistema del explorador: $nombre con $energia% de energía inicial.")
+        println("Iniciando sistma del explorador: $nombre con $energia% de energía inicial.")
     }
 }
