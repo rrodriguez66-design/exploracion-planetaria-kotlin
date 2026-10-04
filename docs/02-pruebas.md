@@ -48,3 +48,5 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Utilizar la interfaz en diferentes objetos.
 *   **Resultado esperado:** Las clases correspondientes cumplen el contrato definido en `Comunicable`.
 *   **Resultado obtenido:** ¡Exitoso! Al llamar a `transmitirDatos()`, tanto el rover como el dron enviaron su mensaje, pero cada uno con su propio estilo (antena terrestre vs vía satélite).
+
+<img width="1666" height="770" alt="image" src="https://github.com/user-attachments/assets/daae6dce-9f4c-4205-90e8-35089163a98e" />
