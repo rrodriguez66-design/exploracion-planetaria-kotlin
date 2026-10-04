@@ -49,7 +49,7 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Resultado esperado:** Las clases correspondientes cumplen el contrato definido en `Comunicable`.
 *   **Resultado obtenido:** ¡Exitoso! Al llamar a `transmitirDatos()`, tanto el rover como el dron enviaron su mensaje, pero cada uno con su propio estilo (antena terrestre vs vía satélite).
 
-
+<img width="1666" height="770" alt="image" src="https://github.com/user-attachments/assets/daae6dce-9f4c-4205-90e8-35089163a98e" />
 
 ## Pruebas de la Fase 6: Enum y Data Class
 *   **Prueba:** Utilizar `TipoZona.SEGURA` o `ROCOSA`.
@@ -64,4 +64,7 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Resultado esperado:** Se obtiene un nuevo objeto con la modificación solicitada.
 *   **Resultado obtenido:** ¡Exitoso! Se duplicó el hallazgo 1 para crear el hallazgo 2, cambiando solo la descripción y la zona, dejando el tipo intacto.
 
-<img width="1666" height="770" alt="image" src="https://github.com/user-attachments/assets/daae6dce-9f4c-4205-90e8-35089163a98e" />
+
+
+<img width="1637" height="802" alt="image" src="https://github.com/user-attachments/assets/3e672c71-9c32-4084-9096-b38b353cf2c1" />
+
