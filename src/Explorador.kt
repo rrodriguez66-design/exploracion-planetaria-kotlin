@@ -1,9 +1,15 @@
-// FASE 4.2: Clase abstracta
+// FASE 8.1: Clase abstracta con companion object
 abstract class Explorador(
     val nombre: String,
     energiaInicial: Int = 100,
     var distancia: Double = 0.0
 ) {
+    // FASE 8.2: Companion object (miembros compartidos por todas las instancias de la clase)
+    companion object {
+        var contadorExploradores: Int = 0
+            private set
+    }
+
     // Fase 4.4: protected permite que solo esta clase y sus subclases modifiquen el valor
     var energia: Int = energiaInicial
         protected set(valor) {
@@ -21,6 +27,7 @@ abstract class Explorador(
     abstract val consumoBase: Int
 
     init {
+        contadorExploradores++ // Incrementa cada vez que nace un explorador
         this.energia = energiaInicial
     }
 

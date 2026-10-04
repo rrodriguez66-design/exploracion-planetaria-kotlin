@@ -41,4 +41,15 @@ fun main() {
     val rutaPlaneada = 45.5
     // Usamos nuestra nueva función directamente sobre el número decimal
     println("La ruta planeada para mañana es de: ${rutaPlaneada.comoDistancia()}")
+
+    println("\n--- Pruebas de Object y Companion Object (Fase 8) ---")
+    // Usamos el object CentroControl sin instanciarlo
+    CentroControl.registrarOperacion("Despegue de naves completado.")
+    CentroControl.registrarDescubrimiento(hallazgo1)
+
+    // Consultamos el companion object usando el nombre de la clase
+    println("Número total de exploradores fabricados en la agencia: ${Explorador.contadorExploradores}")
+
+    // Mostramos el resumen final de la misión
+    CentroControl.mostrarResumenMisión()
 }

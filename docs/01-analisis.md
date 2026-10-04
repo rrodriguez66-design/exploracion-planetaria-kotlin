@@ -123,3 +123,20 @@ No, la clase original `Double` de Kotlin permanece intacta. La función de exten
 
 **¿Puede la extensión acceder directamente a los miembros private de esa clase?**
 No, las funciones de extensión respetan la encapsulación. Solo tienen acceso a los miembros públicos (`public`) de la clase que extienden.
+
+## Fase 8. object y companion object
+
+**¿Por qué utilizaste object para CentroControl?**
+Porque en una simulación de misión espacial solo debe existir una única entidad coordinadora central (un Singleton). No tendría sentido lógico crear múltiples "Centros de Control" independientes.
+
+**¿Por qué no necesitas crear diferentes instancias?**
+Porque al declararse como `object`, Kotlin crea una única instancia estática y global en memoria automáticamente a la que podemos acceder desde cualquier parte del programa de inmediato.
+
+**¿Qué colocaste dentro del companion object?**
+Coloqué la variable `contadorExploradores`.
+
+**¿Por qué esa información pertenece a la clase y no a un explorador particular?**
+Porque el conteo total de vehículos fabricados es una estadística global de la clase `Explorador`, no una característica individual de Ares o de Ícaro.
+
+**¿Cuál es la diferencia entre CentroControl y el companion object de tu programa?**
+`CentroControl` es un objeto independiente (`object`) que coordina operaciones globales de la misión. El `companion object` está vinculado al interior de la clase `Explorador` para compartir variables y funciones específicas asociadas a ese tipo de entidades.

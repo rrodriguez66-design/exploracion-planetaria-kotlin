@@ -74,3 +74,13 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Resultado obtenido:** ¡Exitoso! Al aplicar la función sobre `45.5`, la consola imprimió el texto "45.5 km".
 
 <img width="1536" height="717" alt="image" src="https://github.com/user-attachments/assets/e228f0d7-5372-4204-9475-38ef358a240c" />
+
+
+## Pruebas de la Fase 8: Object y Companion Object
+*   **Prueba:** Utilizar `CentroControl` desde diferentes puntos sin instanciarlo.
+*   **Resultado esperado:** Se utiliza exactamente el mismo objeto global para registrar y mostrar datos.
+*   **Resultado obtenido:** ¡Exitoso! El centro de control acumuló las operaciones y descubrimientos correctamente.
+
+*   **Prueba:** Crear varios exploradores y verificar el contador global.
+*   **Resultado esperado:** El elemento del `companion object` se comparte y contabiliza correctamente a todas las instancias.
+*   **Resultado obtenido:** ¡Exitoso! Al invocar `Explorador.contadorExploradores`, devolvió el número exacto de vehículos creados.
