@@ -26,12 +26,16 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
     Resultado: La energía de Ares quedó en 100% (límite superado)
     ```
 
+    <img width="1537" height="562" alt="image" src="https://github.com/user-attachments/assets/2dc57cbd-c3b3-48eb-b917-0eeff33c3fb5" />
+
+
 *   **Prueba:** Asignar energía menor a 0.
 *   **Resultado esperado:** No se conserva un valor inválido (se limita a 0).
 *   **Resultado obtenido:** ¡Exitoso! Al intentar asignar -20 a Ares, el sistema lo ajustó a 0.
 
 ---
 *(Las siguientes pruebas se irán documentando conforme se completen las Fases 4 a la 10)*
+
 
 ## Pruebas de la Fase 4: Herencia
 *   **Prueba:** Crear un rover y un dron y ejecutar comportamiento sobrescrito.
