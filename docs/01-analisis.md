@@ -50,3 +50,14 @@ Permiten instanciar objetos con menos código y evitan tener que escribir múlti
  
 **¿Cuándo se ejecuta el bloque init?**
 Se ejecuta de forma automática e inmediata al momento de instanciar el objeto (justo después del constructor primario), siendo ideal para validaciones o mensajes iniciales de arranque.
+
+## Fase 3. Propiedades, encapsulación y comportamiento
+
+**¿Qué información protegiste mediante private?**
+Protegí la propiedad `consumoPorKm` y la función `consumirEnergia()`.
+
+**¿Por qué no debe modificarse directamente desde main()?**
+Porque representan reglas internas del funcionamiento físico del vehículo. Si `main()` pudiera alterar la tasa de consumo, la simulación perdería fidelidad. `main()` solo debe ordenar el desplazamiento, y el objeto debe encargarse de calcular sus propios consumos internamente.
+
+**¿Qué información necesita estar disponible para las subclases?**
+(Esto se definirá en la siguiente fase), pero propiedades esenciales como `nombre`, `energia`, `distancia` y funciones base como `mostrarInformacion()` deberán ser accesibles o modificables por los vehículos específicos (rover y dron).
