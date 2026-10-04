@@ -36,4 +36,9 @@ fun main() {
 
     println("\nDescubrimiento modificado con copy():")
     println(hallazgo2)
+
+    println("\n--- Pruebas de Función de Extensión (Fase 7) ---")
+    val rutaPlaneada = 45.5
+    // Usamos nuestra nueva función directamente sobre el número decimal
+    println("La ruta planeada para mañana es de: ${rutaPlaneada.comoDistancia()}")
 }

@@ -68,3 +68,7 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 
 <img width="1637" height="802" alt="image" src="https://github.com/user-attachments/assets/3e672c71-9c32-4084-9096-b38b353cf2c1" />
 
+## Pruebas de la Fase 7: Función de extensión
+*   **Prueba:** Ejecutar la función de extensión `comoDistancia()` sobre un tipo Double.
+*   **Resultado esperado:** Produce el resultado esperado formateando el valor numérico.
+*   **Resultado obtenido:** ¡Exitoso! Al aplicar la función sobre `45.5`, la consola imprimió el texto "45.5 km".

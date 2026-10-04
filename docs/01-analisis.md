@@ -109,3 +109,17 @@ Kotlin genera automáticamente funciones muy útiles por detrás, como `toString
 
 **¿Qué hace copy()?**
 Permite crear un clon exacto de un objeto existente, dándote la opción de modificar solamente propiedades específicas en el nuevo objeto, manteniendo el original intacto (ideal para trabajar con variables inmutables `val`).
+
+## Fase 7. Funciones de extensión
+
+**¿Qué tipo extendiste?**
+Extendí el tipo nativo `Double` de Kotlin.
+
+**¿Qué funcionalidad agregaste?**
+Agregué la función `comoDistancia()`, la cual formatea automáticamente cualquier número decimal agregándole el sufijo " km", devolviendo un String listo para la interfaz.
+
+**¿Modificaste realmente la clase original?**
+No, la clase original `Double` de Kotlin permanece intacta. La función de extensión se resuelve de forma estática, simplemente "simulando" ser parte de la clase para facilitar su uso en este proyecto.
+
+**¿Puede la extensión acceder directamente a los miembros private de esa clase?**
+No, las funciones de extensión respetan la encapsulación. Solo tienen acceso a los miembros públicos (`public`) de la clase que extienden.
