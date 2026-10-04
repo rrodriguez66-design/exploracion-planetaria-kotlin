@@ -84,3 +84,5 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Crear varios exploradores y verificar el contador global.
 *   **Resultado esperado:** El elemento del `companion object` se comparte y contabiliza correctamente a todas las instancias.
 *   **Resultado obtenido:** ¡Exitoso! Al invocar `Explorador.contadorExploradores`, devolvió el número exacto de vehículos creados.
+
+  <img width="1672" height="867" alt="image" src="https://github.com/user-attachments/assets/44a64040-82a7-4d01-9a72-f3b8e83c9890" />
