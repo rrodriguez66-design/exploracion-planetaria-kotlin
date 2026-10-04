@@ -72,3 +72,5 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Ejecutar la función de extensión `comoDistancia()` sobre un tipo Double.
 *   **Resultado esperado:** Produce el resultado esperado formateando el valor numérico.
 *   **Resultado obtenido:** ¡Exitoso! Al aplicar la función sobre `45.5`, la consola imprimió el texto "45.5 km".
+
+<img width="1536" height="717" alt="image" src="https://github.com/user-attachments/assets/e228f0d7-5372-4204-9475-38ef358a240c" />
