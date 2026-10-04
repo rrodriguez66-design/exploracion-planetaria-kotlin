@@ -36,3 +36,17 @@ La acción de "Analizar una zona" es una capacidad que distintos vehículos pued
 
 **¿Qué información pertenece a un explorador particular y cuál podría ser compartida?**
 El nivel de energía, nombre y distancia pertenecen a un explorador particular. La bitácora general de la misión, los contadores globales y el registro de descubrimientos deben ser compartidos (Centro de control).
+
+## Fase 2. Clases, objetos y constructores
+
+**¿Qué diferencia existe entre la clase que definiste y los objetos que creaste a partir de ella?**
+La clase `Explorador` es el "molde" o plantilla que define la estructura. Los objetos (`exp1`, `exp2`, `exp3`) son las instancias reales creadas en memoria a partir de ese molde, cada uno con sus propios datos.
+
+**¿Por qué decidiste utilizar val o var para cada una de las propiedades principales de tu clase?**
+Utilicé `val` para el `nombre` porque la identidad del explorador no debe cambiar una vez fabricado. Utilicé `var` para `energia` y `distancia` porque estos valores cambiarán constantemente mientras el vehículo se desplaza.
+
+**¿Qué ventaja ofrecen los parámetros predeterminados?**
+Permiten instanciar objetos con menos código y evitan tener que escribir múltiples constructores secundarios. Si al crear el objeto no especifico la distancia, Kotlin asume automáticamente el valor de 0.0.
+ 
+**¿Cuándo se ejecuta el bloque init?**
+Se ejecuta de forma automática e inmediata al momento de instanciar el objeto (justo después del constructor primario), siendo ideal para validaciones o mensajes iniciales de arranque.
