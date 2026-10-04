@@ -61,3 +61,23 @@ Porque representan reglas internas del funcionamiento físico del vehículo. Si 
 
 **¿Qué información necesita estar disponible para las subclases?**
 (Esto se definirá en la siguiente fase), pero propiedades esenciales como `nombre`, `energia`, `distancia` y funciones base como `mostrarInformacion()` deberán ser accesibles o modificables por los vehículos específicos (rover y dron).
+
+## Fase 4. Herencia y clases abstractas
+
+### Diseño de la jerarquía
+*   **Comunes:** Todos tienen nombre, energía, distancia, consumen batería y se desplazan.
+*   **Diferencias:** El rover tiene tracción terrestre y consume menos energía. El dron vuela, escanea desde el aire y consume más energía.
+*   **Exclusivas del dron:** Estado de rotores.
+*   **Exclusivas del rover:** Tracción de orugas.
+
+**¿Por qué Explorador es una clase abstracta?**
+Porque el concepto "Explorador" es genérico. En la vida real de la misión no enviamos un "explorador" abstracto, enviamos un modelo físico concreto (un rover o un dron). La clase abstracta solo sirve como molde obligatorio.
+
+**¿Qué heredaron RoverTerrestre y DronExplorador?**
+Heredaron las propiedades (`nombre`, `energia`, `distancia`) y las funciones de control de batería (`desplazarse()`, `mostrarInformacion()`).
+
+**¿Qué comportamiento sobrescribiste?**
+Sobrescribí la propiedad abstracta `consumoBase`, la función abstracta `explorar()`, y las funciones abiertas (`open`) `desplazarse()` y `mostrarInformacion()`.
+
+**¿Por qué fue necesario utilizar open y override?**
+Porque la herencia por defecto en Kotlin está bloqueada (las clases son `final`). Usar `open` en el padre permite abrir el candado, y usar `override` en el hijo indica explícitamente que estamos modificando ese comportamiento heredado para adaptarlo a ese vehículo.

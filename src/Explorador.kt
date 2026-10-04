@@ -1,14 +1,12 @@
-class Explorador(
+// FASE 4.2: Clase abstracta
+abstract class Explorador(
     val nombre: String,
     energiaInicial: Int = 100,
     var distancia: Double = 0.0
 ) {
-    // FASE 3.4: Visibilidad (private). Esta tasa de consumo es interna y nadie de afuera debería alterarla.
-    private val consumoPorKm: Int = 5
-
-    // FASE 3.1: Setter personalizado. Impide que la energía baje de 0 o suba de 100.
+    // Fase 4.4: protected permite que solo esta clase y sus subclases modifiquen el valor
     var energia: Int = energiaInicial
-        set(valor) {
+        protected set(valor) {
             field = when {
                 valor > 100 -> 100
                 valor < 0 -> 0
@@ -16,38 +14,37 @@ class Explorador(
             }
         }
 
-    // FASE 3.2: Propiedad calculada (Getter personalizado). Se calcula en el momento, no almacena un dato estático.
     val bateriaBaja: Boolean
         get() = energia < 20
 
+    // Propiedad abstracta: Cada vehículo hijo deberá definir cuánto consume
+    abstract val consumoBase: Int
+
     init {
-        // Aseguramos que la energía inicial pase por nuestro filtro del setter
         this.energia = energiaInicial
-        println("Iniciando sistema del explorador: $nombre con $energia% de energía.")
     }
 
-    // FASE 3.3: Funciones miembro y comportamiento
-    private fun consumirEnergia(cantidad: Int) {
+    protected fun consumirEnergia(cantidad: Int) {
         energia -= cantidad
     }
 
-    fun desplazarse(km: Double) {
-        println("\n[$nombre] Iniciando desplazamiento de $km km...")
-        val energiaNecesaria = (km * consumoPorKm).toInt()
-
+    // Función open: Permite que las subclases la sobrescriban (override) si lo necesitan
+    open fun desplazarse(km: Double) {
+        val energiaNecesaria = (km * consumoBase).toInt()
         if (energia >= energiaNecesaria) {
             distancia += km
-            consumirEnergia(energiaNecesaria) // Llamamos a la función privada
-            println("[$nombre] Desplazamiento exitoso. Energía restante: $energia%")
+            consumirEnergia(energiaNecesaria)
+            println("[$nombre] Se desplazó $km km. Energía restante: $energia%")
         } else {
             println("[$nombre] ALERTA: Energía insuficiente para recorrer $km km.")
         }
     }
 
-    fun mostrarInformacion() {
-        println("\n--- Reporte de Misión: $nombre ---")
-        println("Distancia total recorrida: $distancia km")
-        println("Nivel de energía: $energia%")
-        println("Batería crítica: ${if (bateriaBaja) "SÍ" else "NO"}")
+    // Función abstracta: Las subclases están obligadas a programar cómo exploran
+    abstract fun explorar()
+
+    open fun mostrarInformacion() {
+        println("\n--- Reporte: $nombre ---")
+        println("Distancia: $distancia km | Energía: $energia%")
     }
 }
