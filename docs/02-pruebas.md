@@ -41,6 +41,7 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Crear un rover y un dron y ejecutar comportamiento sobrescrito.
 *   **Resultado esperado:** Cada tipo responde de acuerdo con su implementación (heredan lo común, pero exploran y se desplazan distinto).
 *   **Resultado obtenido:** ¡Exitoso! El dron gastó 50% de energía al recorrer 5km, mientras que el rover gastó solo 25% por la misma distancia gracias al polimorfismo de `consumoBase`. Además, imprimieron mensajes distintos al explorar.
+<img width="1723" height="956" alt="image" src="https://github.com/user-attachments/assets/4b4d8c6b-7ece-465f-baa6-4e30b2e164ff" />
 
 
 ## Pruebas de la Fase 5: Interfaces
