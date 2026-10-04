@@ -1,5 +1,7 @@
 package exploradores
 
+import modelo.Comunicable
+
 class RoverTerrestre(nombre: String, energiaInicial: Int = 100) : Explorador(nombre, energiaInicial), Comunicable {
 
     override val consumoBase: Int = 5
