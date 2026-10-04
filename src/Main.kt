@@ -15,4 +15,8 @@ fun main() {
     dron.desplazarse(5.0)
     dron.explorar()
     dron.mostrarInformacion()
+
+    println("\n--- Pruebas de Transmisión (Interfaz) ---")
+    rover.transmitirDatos("Hemos encontrado rocas con posible hielo.")
+    dron.transmitirDatos("Mapeo del cuadrante norte completado sin anomalías.")
 }

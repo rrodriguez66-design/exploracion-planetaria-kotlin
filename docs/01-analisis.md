@@ -81,3 +81,17 @@ Sobrescribí la propiedad abstracta `consumoBase`, la función abstracta `explor
 
 **¿Por qué fue necesario utilizar open y override?**
 Porque la herencia por defecto en Kotlin está bloqueada (las clases son `final`). Usar `open` en el padre permite abrir el candado, y usar `override` en el hijo indica explícitamente que estamos modificando ese comportamiento heredado para adaptarlo a ese vehículo.
+
+## Fase 5. Interfaces
+
+**¿Qué capacidad representa tu interfaz?**
+Representa la capacidad de comunicación (`Comunicable`), específicamente enviar transmisiones o mensajes de datos.
+
+**¿Qué clases la implementan?**
+Tanto `RoverTerrestre` como `DronExplorador`.
+
+**¿Por qué utilizaste una interfaz en lugar de otra superclase?**
+Porque Kotlin no permite la herencia múltiple (un vehículo no puede heredar de dos clases abstractas al mismo tiempo). Las interfaces permiten agregar capacidades extra a una clase sin romper su jerarquía principal.
+
+**¿Qué diferencia existe entre lo que representa Explorador y lo que representa tu interfaz?**
+La clase abstracta `Explorador` define la *esencia* y el estado base del objeto (tiene energía, tiene nombre). La interfaz `Comunicable` define simplemente un *contrato de comportamiento* o habilidad que el objeto es capaz de realizar (puede transmitir).

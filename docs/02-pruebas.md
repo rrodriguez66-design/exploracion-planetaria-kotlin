@@ -43,3 +43,7 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Resultado obtenido:** ¡Exitoso! El dron gastó 50% de energía al recorrer 5km, mientras que el rover gastó solo 25% por la misma distancia gracias al polimorfismo de `consumoBase`. Además, imprimieron mensajes distintos al explorar.
 
 
+## Pruebas de la Fase 5: Interfaces
+*   **Prueba:** Utilizar la interfaz en diferentes objetos.
+*   **Resultado esperado:** Las clases correspondientes cumplen el contrato definido en `Comunicable`.
+*   **Resultado obtenido:** ¡Exitoso! Al llamar a `transmitirDatos()`, tanto el rover como el dron enviaron su mensaje, pero cada uno con su propio estilo (antena terrestre vs vía satélite).

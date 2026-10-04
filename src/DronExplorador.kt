@@ -1,7 +1,5 @@
-// FASE 4.3: Subclase Dron
-class DronExplorador(nombre: String, energiaInicial: Int = 100) : Explorador(nombre, energiaInicial) {
+class DronExplorador(nombre: String, energiaInicial: Int = 100) : Explorador(nombre, energiaInicial), Comunicable {
 
-    // El dron gasta más energía por volar
     override val consumoBase: Int = 10
 
     override fun explorar() {
@@ -9,7 +7,12 @@ class DronExplorador(nombre: String, energiaInicial: Int = 100) : Explorador(nom
     }
 
     override fun mostrarInformacion() {
-        super.mostrarInformacion() // Muestra la info base
-        println("Estado de rotores: ÓPTIMO") // Añade info exclusiva del dron
+        super.mostrarInformacion()
+        println("Estado de rotores: ÓPTIMO")
+    }
+
+    // FASE 5.2: Implementación del contrato de la interfaz
+    override fun transmitirDatos(mensaje: String) {
+        println("[$nombre] 🛰️ Transmitiendo vía satélite desde el aire: $mensaje")
     }
 }
