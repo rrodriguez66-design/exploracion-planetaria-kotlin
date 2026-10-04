@@ -95,3 +95,17 @@ Porque Kotlin no permite la herencia múltiple (un vehículo no puede heredar de
 
 **¿Qué diferencia existe entre lo que representa Explorador y lo que representa tu interfaz?**
 La clase abstracta `Explorador` define la *esencia* y el estado base del objeto (tiene energía, tiene nombre). La interfaz `Comunicable` define simplemente un *contrato de comportamiento* o habilidad que el objeto es capaz de realizar (puede transmitir).
+
+## Fase 6. Recursos específicos de Kotlin
+
+**¿Qué ventaja ofrece utilizar TipoZona en lugar de representar estos estados mediante String?**
+Previene errores de escritura (typos) y restringe las opciones. Si usara un String, alguien podría escribir "peligrosa", "Peligrosa" o "Peligro", causando errores. Con el `enum class`, el compilador solo acepta las 3 opciones estrictas que definí.
+
+**¿Por qué Descubrimiento es un buen candidato para una data class?**
+Porque su única responsabilidad es almacenar y transportar datos (tipo, descripción y zona). No necesita lógica compleja ni modificar comportamientos.
+
+**¿Qué comportamiento proporciona Kotlin automáticamente?**
+Kotlin genera automáticamente funciones muy útiles por detrás, como `toString()` (para imprimir el objeto de forma legible en texto), `equals()` (para comparar si dos objetos tienen los mismos datos) y `hashCode()`.
+
+**¿Qué hace copy()?**
+Permite crear un clon exacto de un objeto existente, dándote la opción de modificar solamente propiedades específicas en el nuevo objeto, manteniendo el original intacto (ideal para trabajar con variables inmutables `val`).

@@ -48,3 +48,18 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 *   **Prueba:** Utilizar la interfaz en diferentes objetos.
 *   **Resultado esperado:** Las clases correspondientes cumplen el contrato definido en `Comunicable`.
 *   **Resultado obtenido:** ¡Exitoso! Al llamar a `transmitirDatos()`, tanto el rover como el dron enviaron su mensaje, pero cada uno con su propio estilo (antena terrestre vs vía satélite).
+
+
+
+## Pruebas de la Fase 6: Enum y Data Class
+*   **Prueba:** Utilizar `TipoZona.SEGURA` o `ROCOSA`.
+*   **Resultado esperado:** Se utiliza correctamente el enum.
+*   **Resultado obtenido:** ¡Exitoso! Se asignó `TipoZona.SEGURA` y `TipoZona.PELIGROSA` a los hallazgos sin errores de tipo.
+
+*   **Prueba:** Crear un descubrimiento e imprimirlo.
+*   **Resultado esperado:** La data class conserva sus datos y los imprime automáticamente con buen formato.
+*   **Resultado obtenido:** ¡Exitoso! La consola imprimió la estructura `Descubrimiento(tipo=..., descripcion=..., zona=...)`.
+
+*   **Prueba:** Utilizar `copy()`.
+*   **Resultado esperado:** Se obtiene un nuevo objeto con la modificación solicitada.
+*   **Resultado obtenido:** ¡Exitoso! Se duplicó el hallazgo 1 para crear el hallazgo 2, cambiando solo la descripción y la zona, dejando el tipo intacto.
