@@ -52,9 +52,9 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 <img width="1666" height="770" alt="image" src="https://github.com/user-attachments/assets/daae6dce-9f4c-4205-90e8-35089163a98e" />
 
 ## Pruebas de la Fase 6: Enum y Data Class
-*   **Prueba:** Utilizar `TipoZona.SEGURA` o `ROCOSA`.
+*   **Prueba:** Utilizar `modelo.TipoZona.SEGURA` o `ROCOSA`.
 *   **Resultado esperado:** Se utiliza correctamente el enum.
-*   **Resultado obtenido:** ¡Exitoso! Se asignó `TipoZona.SEGURA` y `TipoZona.PELIGROSA` a los hallazgos sin errores de tipo.
+*   **Resultado obtenido:** ¡Exitoso! Se asignó `modelo.TipoZona.SEGURA` y `modelo.TipoZona.PELIGROSA` a los hallazgos sin errores de tipo.
 
 *   **Prueba:** Crear un descubrimiento e imprimirlo.
 *   **Resultado esperado:** La data class conserva sus datos y los imprime automáticamente con buen formato.
@@ -83,6 +83,12 @@ A continuación se documentan las pruebas realizadas durante el desarrollo de la
 
 *   **Prueba:** Crear varios exploradores y verificar el contador global.
 *   **Resultado esperado:** El elemento del `companion object` se comparte y contabiliza correctamente a todas las instancias.
-*   **Resultado obtenido:** ¡Exitoso! Al invocar `Explorador.contadorExploradores`, devolvió el número exacto de vehículos creados.
+*   **Resultado obtenido:** ¡Exitoso! Al invocar `exploradores.Explorador.contadorExploradores`, devolvió el número exacto de vehículos creados.
 
   <img width="1672" height="867" alt="image" src="https://github.com/user-attachments/assets/44a64040-82a7-4d01-9a72-f3b8e83c9890" />
+
+
+## Pruebas de la Fase 9: Paquetes e Integración
+*   **Prueba:** Compilación y ejecución tras reorganizar las clases en paquetes.
+*   **Resultado esperado:** El proyecto compila sin errores de importación y el archivo `Main.kt` coordina correctamente los paquetes mediante sentencias `import`.
+*   **Resultado obtenido:** ¡Exitoso! El sistema mantiene exactamente el mismo comportamiento funcional pero con una arquitectura modular y limpia.

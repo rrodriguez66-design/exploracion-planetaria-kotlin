@@ -140,3 +140,12 @@ Porque el conteo total de vehículos fabricados es una estadística global de la
 
 **¿Cuál es la diferencia entre CentroControl y el companion object de tu programa?**
 `CentroControl` es un objeto independiente (`object`) que coordina operaciones globales de la misión. El `companion object` está vinculado al interior de la clase `Explorador` para compartir variables y funciones específicas asociadas a ese tipo de entidades.
+
+## Fase 9. Organización mediante paquetes
+
+**¿Qué criterio utilizaste para organizar las clases en paquetes?**
+Se agruparon de acuerdo con su responsabilidad principal dentro del sistema:
+- `exploradores`: Contiene la clase abstracta base y los vehículos concretos (Rover y Dron).
+- `modelo`: Agrupa las estructuras de datos, enums e interfaces (`Descubrimiento`, `TipoZona`, `Comunicable`).
+- `control`: Alberga el objeto singleton coordinador (`CentroControl`).
+- `utilidades`: Contiene herramientas de apoyo transversal como las funciones de extensión.

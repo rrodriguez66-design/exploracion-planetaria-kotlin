@@ -1,3 +1,5 @@
+package exploradores
+
 class DronExplorador(nombre: String, energiaInicial: Int = 100) : Explorador(nombre, energiaInicial), Comunicable {
 
     override val consumoBase: Int = 10

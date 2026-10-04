@@ -1,3 +1,5 @@
+package exploradores
+
 // FASE 8.1: Clase abstracta con companion object
 abstract class Explorador(
     val nombre: String,

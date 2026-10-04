@@ -1,7 +1,15 @@
+import control.CentroControl
+import exploradores.DronExplorador
+import exploradores.Explorador
+import exploradores.RoverTerrestre
+import modelo.Descubrimiento
+import modelo.TipoZona
+import utilidades.comoDistancia
+
 fun main() {
     println("--- Misión de exploración planetaria ---\n")
 
-    // Instanciamos a los "hijos" específicos, ya no al Explorador abstracto
+    // Instanciamos a los "hijos" específicos, ya no al exploradores.Explorador abstracto
     val rover = RoverTerrestre("Ares", 100)
     val dron = DronExplorador("Ícaro", 100)
 
@@ -25,7 +33,7 @@ fun main() {
     val hallazgo1 = Descubrimiento("Agua congelada", "Muestra de hielo en cráter", TipoZona.SEGURA)
 
     // Al imprimir, la data class genera un texto automático muy legible
-    println("Descubrimiento original:")
+    println("modelo.Descubrimiento original:")
     println(hallazgo1)
 
     // Usamos copy() para duplicar el hallazgo pero cambiarle algunos datos
@@ -34,7 +42,7 @@ fun main() {
         zona = TipoZona.PELIGROSA
     )
 
-    println("\nDescubrimiento modificado con copy():")
+    println("\nmodelo.Descubrimiento modificado con copy():")
     println(hallazgo2)
 
     println("\n--- Pruebas de Función de Extensión (Fase 7) ---")
@@ -43,7 +51,7 @@ fun main() {
     println("La ruta planeada para mañana es de: ${rutaPlaneada.comoDistancia()}")
 
     println("\n--- Pruebas de Object y Companion Object (Fase 8) ---")
-    // Usamos el object CentroControl sin instanciarlo
+    // Usamos el object control.CentroControl sin instanciarlo
     CentroControl.registrarOperacion("Despegue de naves completado.")
     CentroControl.registrarDescubrimiento(hallazgo1)
 

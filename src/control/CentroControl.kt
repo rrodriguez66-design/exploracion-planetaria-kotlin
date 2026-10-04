@@ -1,3 +1,7 @@
+package control
+
+import modelo.Descubrimiento
+
 // FASE 8.1: Centro de control mediante object (Singleton)
 object CentroControl {
     private val registroOperaciones = mutableListOf<String>()
